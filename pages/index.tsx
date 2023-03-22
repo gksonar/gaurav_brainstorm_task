@@ -40,8 +40,6 @@ const Home: NextPage = () => {
         setCapsuleData(data);
       });
   };
-
-  console.log(capsuleData);
   return (
     <>
       <HomePage />
