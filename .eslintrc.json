@@ -1,0 +1,38 @@
+{
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-restricted-imports": [
+      "error",
+      {
+        "name": "react-redux",
+        "importNames": ["useSelector", "useDispatch"],
+        "message": "Use typed hooks `useAppDispatch` and `useAppSelector` instead."
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "import/prefer-default-export": "off",
+    "react/prop-types": "off",
+    "no-param-reassign": 0,
+    "no-use-before-define": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-tabs": 0,
+    "no-unused-vars": "off",
+    "singleQuote": 0,
+    "no-restricted-imports": "off",
+    "no-console": "error"
+  }
+}
