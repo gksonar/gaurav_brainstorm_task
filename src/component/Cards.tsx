@@ -47,10 +47,10 @@ const Cards = (props: Props) => {
         }
       })
       .filter((capsuleObj) => {
-        if (capsuleObj.original_launch)
-          if (searchOriginalLaunchQuery === "") {
-            return capsuleObj;
-          } else if (
+        if (searchOriginalLaunchQuery === "") {
+          return capsuleObj;
+        } else if (capsuleObj.original_launch)
+          if (
             capsuleObj.original_launch.includes(
               searchOriginalLaunchQuery.toLowerCase()
             )
@@ -59,10 +59,10 @@ const Cards = (props: Props) => {
           }
       })
       .filter((capsuleObj) => {
-        if (capsuleObj.type.toLowerCase())
-          if (searchTypeQuery === "") {
-            return capsuleObj;
-          } else if (
+        if (searchTypeQuery === "") {
+          return capsuleObj;
+        } else if (capsuleObj.type)
+          if (
             capsuleObj.type
               .toLowerCase()
               .includes(searchTypeQuery.toLowerCase())
@@ -71,7 +71,7 @@ const Cards = (props: Props) => {
           }
       });
   };
-
+  console.log(value);
   return (
     <section className="py-16 bg-gray-100 overflow-hidden ml-4 mr-4 ">
       <div className="container mx-auto px-4">

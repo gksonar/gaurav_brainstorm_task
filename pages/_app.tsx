@@ -11,7 +11,7 @@ const inter = Poppins({
   style: ["normal", "italic"],
   subsets: ["latin"],
 });
-export const App = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <Provider store={store}>
       <Component {...pageProps} />
